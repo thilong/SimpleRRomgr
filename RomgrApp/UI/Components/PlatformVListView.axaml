@@ -1,0 +1,25 @@
+<Border xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:components="clr-namespace:RomgrApp.UI.Components"
+        xmlns:models="clr-namespace:RomgrApp.Model"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="450"
+        x:Class="RomgrApp.UI.Components.PlatformVListView"
+        BorderBrush="LightGray"
+        BorderThickness="0,0,1,0">
+    <ScrollViewer>
+        <ListBox Background="White" x:Name="PlatformList">
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="models:Platform">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                        <TextBlock Text="{Binding FullName}" FontSize="12" Foreground="Gray"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </ScrollViewer>
+
+</Border>

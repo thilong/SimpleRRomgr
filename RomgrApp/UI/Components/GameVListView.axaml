@@ -1,0 +1,28 @@
+﻿<Border xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="800"
+        x:Class="RomgrApp.UI.Components.GameVListView"
+        BorderBrush="LightGray"
+        BorderThickness="0,0,1,0">
+    <Grid RowDefinitions="*, 1, 0.3*">
+        <ListBox Grid.Row="0" Background="White">
+            <ListBoxItem>
+                <TextBlock> 最终幻想1</TextBlock>
+            </ListBoxItem>
+        </ListBox>
+        <GridSplitter Grid.Row="1" Background="LightGray" ResizeDirection="Rows" />
+        <Grid Grid.Row="2" RowDefinitions="24,*">
+            <Border Padding="5,2,5,3" VerticalAlignment="Center" Background="LightGray">
+                <TextBlock>变体</TextBlock>
+            </Border>
+            <ListBox Grid.Row="1" Background="White">
+                <ListBoxItem>
+                    <TextBlock> 盗版 </TextBlock>
+                </ListBoxItem>
+            </ListBox>
+        </Grid>
+
+    </Grid>
+</Border>

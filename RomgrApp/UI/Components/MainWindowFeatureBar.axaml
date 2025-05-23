@@ -1,0 +1,23 @@
+﻿<Border xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800"
+        Height="51"
+        Padding="10" BorderBrush="LightGray" BorderThickness="0,0,0,1"
+        x:Class="RomgrApp.UI.Components.MainWindowFeatureBar">
+    <RelativePanel>
+        <StackPanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">
+            <TextBlock>
+                GBA > RPG
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="5" RelativePanel.AlignRightWithPanel="True"  RelativePanel.AlignVerticalCenterWithPanel="True">
+            <Button> Add Platform </Button>
+            <Button> Add Category </Button>
+            <Button> Add Game </Button>
+            <Panel Width="1" Height="40" Background="LightGray"></Panel>
+            <Button> Setting </Button>
+        </StackPanel>
+    </RelativePanel>
+</Border>
