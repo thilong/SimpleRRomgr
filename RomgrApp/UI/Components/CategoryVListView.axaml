@@ -1,30 +1,26 @@
-﻿<Border xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:components="clr-namespace:RomgrApp.UI.Components"
-        xmlns:models="clr-namespace:RomgrApp.Model"
-        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="450"
-        x:Class="RomgrApp.UI.Components.CategoryVListView"
-        BorderBrush="LightGray"
-        BorderThickness="0,0,1,0">
-    <ScrollViewer>
-        <ListBox Background="White" x:Name="CategoryList">
-            <ListBox.ItemTemplate>
-                <DataTemplate DataType="models:Category">
-                    <TextBlock Text="{Binding Name}"></TextBlock>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <!--
-        <ItemsRepeater x:Name="CategoryList">
-            <ItemsRepeater.ItemTemplate>
-                <DataTemplate>
-                    <components:CategoryVListItemView />
-                </DataTemplate>
-            </ItemsRepeater.ItemTemplate>
-        </ItemsRepeater>
-        -->
-    </ScrollViewer>
-
-</Border>
+﻿<Grid xmlns="https://github.com/avaloniaui"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:components="clr-namespace:RomgrApp.UI.Components"
+      xmlns:models="clr-namespace:RomgrApp.Model"
+      mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="450"
+      x:Class="RomgrApp.UI.Components.CategoryVListView"
+      RowDefinitions="*,1,60">
+    <ListBox Grid.Row="0" Background="White" x:Name="CategoryList" Padding="5">
+        <ListBox.ItemTemplate>
+            <DataTemplate DataType="models:Category">
+                <TextBlock Text="{Binding Name}"></TextBlock>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+    <Panel Grid.Row="1" Background="{StaticResource DividerColor}" IsVisible="False"></Panel>
+    <StackPanel Grid.Row="2" Margin="{StaticResource DefaultPadding}" Orientation="Horizontal" Spacing="10">
+        <Button Width="30" Height="30" Padding="5" x:Name="ActionAddCategory">
+            <Image Source="{SvgImage /Resource/add.svg}"></Image>
+        </Button>
+        <Button Width="30" Height="30" Padding="5">
+            <Image Source="{SvgImage /Resource/delete.svg}" x:Name="ActionDeleteCategory"></Image>
+        </Button>
+    </StackPanel>
+</Grid>

@@ -6,7 +6,7 @@ using RomgrApp.Model;
 
 namespace RomgrApp.UI.Components;
 
-public partial class CategoryVListView : Border
+public partial class CategoryVListView : Grid
 {
     public CategoryVListView()
     {

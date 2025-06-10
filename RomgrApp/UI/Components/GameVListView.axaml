@@ -5,9 +5,9 @@
         mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="800"
         x:Class="RomgrApp.UI.Components.GameVListView"
         BorderBrush="LightGray"
-        BorderThickness="0,0,1,0">
+        BorderThickness="0,0,0,0">
     <Grid RowDefinitions="*, 1, 0.3*">
-        <ListBox Grid.Row="0" Background="White">
+        <ListBox Grid.Row="0" Background="White" Padding="5">
             <ListBoxItem>
                 <TextBlock> 最终幻想1</TextBlock>
             </ListBoxItem>
@@ -17,7 +17,7 @@
             <Border Padding="5,2,5,3" VerticalAlignment="Center" Background="LightGray">
                 <TextBlock>变体</TextBlock>
             </Border>
-            <ListBox Grid.Row="1" Background="White">
+            <ListBox Grid.Row="1" Background="White" Padding="5">
                 <ListBoxItem>
                     <TextBlock> 盗版 </TextBlock>
                 </ListBoxItem>

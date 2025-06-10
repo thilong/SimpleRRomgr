@@ -1,10 +1,29 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="RomgrApp.App"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+    <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme  />
+        <FluentTheme>
+            <Style Selector="Window">
+                <Setter Property="ExtendClientAreaToDecorationsHint" Value="True"></Setter>
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <SolidColorBrush Color="White"></SolidColorBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </FluentTheme>
     </Application.Styles>
+    <Application.Resources>
+        <sys:Double x:Key="DefaultMarginValue">15</sys:Double>
+        <sys:Double x:Key="DefaultPaddingValue">10</sys:Double>
+        <sys:Double x:Key="DefaultSpacingValue">10</sys:Double>
+
+        <Thickness x:Key="DefaultMargin">10</Thickness>
+        <Thickness x:Key="DefaultPadding">10</Thickness>
+        <SolidColorBrush x:Key="DividerColor" Color="LightGray"></SolidColorBrush>
+    </Application.Resources>
 </Application>

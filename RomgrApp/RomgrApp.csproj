@@ -20,5 +20,20 @@
       <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.5" />
+    <PackageReference Include="Svg.Controls.Skia.Avalonia" Version="11.3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resource\file.svg" />
+    <AvaloniaResource Include="Resource\file.svg" />
+    <None Remove="Resource\add.svg" />
+    <AvaloniaResource Include="Resource\add.svg" />
+    <None Remove="Resource\delete.svg" />
+    <AvaloniaResource Include="Resource\delete.svg" />
   </ItemGroup>
 </Project>

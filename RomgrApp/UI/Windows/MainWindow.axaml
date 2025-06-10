@@ -3,20 +3,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:components="clr-namespace:RomgrApp.UI.Components"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        MinWidth="1200"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
+        MinWidth="800"
+        Width="1200"
         x:Class="RomgrApp.UI.Windows.MainWindow"
         Title="RomgrApp">
-    <DockPanel LastChildFill="True">
-        <!-- toolbar -->
-        <components:MainWindowFeatureBar DockPanel.Dock="Top"/>
-        <!-- platforms -->
-        <components:PlatformVListView Width="200" />
-        <!-- category -->
-        <components:CategoryVListView Width="200" />
-        <!-- game list -->
-        <components:GameVListView  Width="300" />
-        <!-- game detail-->
-        <StackPanel></StackPanel>
-    </DockPanel>
+    <Border BorderBrush="{StaticResource DividerColor}" BorderThickness="1">
+        <DockPanel LastChildFill="True">
+            <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Top" Height="40"
+                    BorderThickness="0,0,0,1" >
+                
+            </Border>
+            <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Left"
+                    BorderThickness="0,0,1,0" >
+                <components:PlatformVListView></components:PlatformVListView>
+            </Border>
+            <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Left"
+                    BorderThickness="0,0,1,0">
+                <components:CategoryVListView Width="200"></components:CategoryVListView>
+            </Border>
+            <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Left"
+                    BorderThickness="0,0,1,0" Width="300">
+                <components:GameVListView></components:GameVListView>
+            </Border>
+            <Panel></Panel>
+        </DockPanel>
+    </Border>
 </Window>

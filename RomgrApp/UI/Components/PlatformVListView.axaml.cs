@@ -4,8 +4,11 @@ using RomgrApp.Model;
 
 namespace RomgrApp.UI.Components;
 
-public partial class PlatformVListView : Border
+public partial class PlatformVListView : Grid
 {
+
+    public VoidDelegate OnOpenWorkspaceAction;
+    
     public PlatformVListView()
     {
         InitializeComponent();
@@ -22,5 +25,11 @@ public partial class PlatformVListView : Border
             FullName = "Nintendo GameBoy Advanced"
         });
         PlatformList.ItemsSource = ps;
+
+
+        ActionOpenWorkspace.Click += (_, _) =>
+        {
+            if(OnOpenWorkspaceAction!= null) OnOpenWorkspaceAction.Invoke();
+        };
     }
 }
