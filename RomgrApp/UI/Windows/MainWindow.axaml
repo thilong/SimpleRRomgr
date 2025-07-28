@@ -6,13 +6,20 @@
         mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
         MinWidth="800"
         Width="1200"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="40"
+        ExtendClientAreaChromeHints="NoChrome"
         x:Class="RomgrApp.UI.Windows.MainWindow"
         Title="RomgrApp">
     <Border BorderBrush="{StaticResource DividerColor}" BorderThickness="1">
         <DockPanel LastChildFill="True">
-            <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Top" Height="40"
+            <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Top" Height="40" x:Name="TitleArea"
                     BorderThickness="0,0,0,1" >
-                
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Content="🗕"  x:Name="WindowMinimizeActionButton" />
+                    <Button Content="🗖"  x:Name="WindowMaximizeActionButton"/>
+                    <Button Content="✕" x:Name="WindowCloseActionButton"/>
+                </StackPanel>
             </Border>
             <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Left"
                     BorderThickness="0,0,1,0" >

@@ -7,14 +7,14 @@
 
     <Application.Styles>
         <FluentTheme>
-            <Style Selector="Window">
+            <!--Style Selector="Window">
                 <Setter Property="ExtendClientAreaToDecorationsHint" Value="True"></Setter>
                 <Setter Property="Background">
                     <Setter.Value>
                         <SolidColorBrush Color="White"></SolidColorBrush>
                     </Setter.Value>
                 </Setter>
-            </Style>
+            </Style-->
         </FluentTheme>
     </Application.Styles>
     <Application.Resources>
