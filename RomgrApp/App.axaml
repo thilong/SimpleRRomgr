@@ -25,5 +25,6 @@
         <Thickness x:Key="DefaultMargin">10</Thickness>
         <Thickness x:Key="DefaultPadding">10</Thickness>
         <SolidColorBrush x:Key="DividerColor" Color="LightGray"></SolidColorBrush>
+
     </Application.Resources>
 </Application>

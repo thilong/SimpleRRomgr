@@ -15,8 +15,11 @@
         <DockPanel LastChildFill="True">
             <Border BorderBrush="{StaticResource DividerColor}" DockPanel.Dock="Top" Height="40" x:Name="TitleArea"
                     BorderThickness="0,0,0,1" >
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Button Content="🗕"  x:Name="WindowMinimizeActionButton" />
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Button Content="Workspace"  />
+                    <Button Content="Platforms"  />
+
+                    <Button Content="🗕"  x:Name="WindowMinimizeActionButton" Margin="10, 0,0,0" />
                     <Button Content="🗖"  x:Name="WindowMaximizeActionButton"/>
                     <Button Content="✕" x:Name="WindowCloseActionButton"/>
                 </StackPanel>
