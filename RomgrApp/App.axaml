@@ -6,16 +6,17 @@
     <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme>
-            <!--Style Selector="Window">
+        <!--FluentTheme>
+            <Style Selector="Window">
                 <Setter Property="ExtendClientAreaToDecorationsHint" Value="True"></Setter>
                 <Setter Property="Background">
                     <Setter.Value>
                         <SolidColorBrush Color="White"></SolidColorBrush>
                     </Setter.Value>
                 </Setter>
-            </Style-->
-        </FluentTheme>
+            </Style>
+        </FluentTheme-->
+        <StyleInclude Source="Theme/RRTheme.axaml" />
     </Application.Styles>
     <Application.Resources>
         <sys:Double x:Key="DefaultMarginValue">15</sys:Double>
