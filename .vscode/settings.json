@@ -1,4 +1,9 @@
 {
+    "editor.fontWeight": "400",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,

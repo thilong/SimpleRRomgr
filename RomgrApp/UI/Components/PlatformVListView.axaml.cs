@@ -12,24 +12,25 @@ public partial class PlatformVListView : Grid
     public PlatformVListView()
     {
         InitializeComponent();
-        var ps = new List<Platform>();
-
-        ps.Add(new Platform()
+        var ps = new List<Platform>
         {
-            Name = "FC",
-            FullName = "Nintendo Famicom"
-        });
-        ps.Add(new Platform()
-        {
-            Name = "GBA",
-            FullName = "Nintendo GameBoy Advanced"
-        });
+            new Platform()
+            {
+                Name = "FC",
+                FullName = "Nintendo Famicom"
+            },
+            new Platform()
+            {
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            }
+        };
         PlatformList.ItemsSource = ps;
 
-
+        /*
         ActionOpenWorkspace.Click += (_, _) =>
         {
             if(OnOpenWorkspaceAction!= null) OnOpenWorkspaceAction.Invoke();
-        };
+        };*/
     }
 }

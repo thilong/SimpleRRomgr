@@ -8,6 +8,7 @@
                 <MergeResourceInclude Source="Colors.axaml" />
                 
                 <MergeResourceInclude Source="Buttons.axaml" />
+                <MergeResourceInclude Source="TextBlocks.axaml" />
                 <MergeResourceInclude Source="Windows.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
