@@ -32,9 +32,9 @@
         </ListBox.Styles>
         <ListBox.ItemTemplate>
             <DataTemplate>
-                <Border CornerRadius="8" Padding="5">
-                    <StackPanel Orientation="Vertical">
-                        <Image Source="/Resource/platforms/ARCADE.png" Width="200"></Image>
+                <Border CornerRadius="8" Padding="5" Margin="5">
+                    <StackPanel Orientation="Vertical" Spacing="10">
+                        <Image Source="/Resource/platforms/PET.png" Width="140"></Image>
                         <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"></TextBlock>
                     </StackPanel>
                 </Border>

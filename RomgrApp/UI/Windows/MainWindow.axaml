@@ -28,12 +28,12 @@
                 <RelativePanel>
                     <StackPanel RelativePanel.AlignLeftWithPanel="True" Orientation="Horizontal" Spacing="5" RelativePanel.AlignVerticalCenterWithPanel="True">
                         <Label Content="RETRO ROMS" FontWeight="Bold" FontSize="24" Margin="0,0, 20, 0" IsHitTestVisible="False" />
-                        <Button Width="24" Height="24" BorderThickness="0">
+                        <Button Width="24" Height="24" BorderThickness="0" x:Name="OpenWorkspaceAction">
                             <Button.Background>
                                 <VisualBrush Visual="{SvgImage /Resource/buttons/workspace.svg}"></VisualBrush>
                             </Button.Background>
                         </Button>
-                        <Button Width="24" Height="24" BorderThickness="0">
+                        <Button Width="24" Height="24" BorderThickness="0" IsVisible="False">
                             <Button.Background>
                                 <VisualBrush Visual="{SvgImage /Resource/buttons/platforms.svg}"></VisualBrush>
                             </Button.Background>
