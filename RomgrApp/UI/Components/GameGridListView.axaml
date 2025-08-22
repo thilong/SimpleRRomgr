@@ -10,9 +10,9 @@
              ScrollViewer.VerticalScrollBarVisibility="Hidden">
         <ListBox.ItemsPanel>
             <ItemsPanelTemplate>
-                <WrapPanel Orientation="Horizontal" ItemSpacing="5"
-                           HorizontalAlignment="Center"
-                           Width="{Binding Bounds.Width, 
+                <components:CenteringWrapPanel
+                                    HorizontalAlignment="Center"
+                                    Width="{Binding Bounds.Width, 
                                                 RelativeSource={RelativeSource TemplatedParent}}" />
             </ItemsPanelTemplate>
         </ListBox.ItemsPanel>
