@@ -21,6 +21,9 @@
             <Color x:Key="HighlightColor2">#FF096085</Color>
             <Color x:Key="HyperlinkVisitedColor">#FF681DA8</Color>
 
+            <Color x:Key="DarkTransparentColor">#11000000</Color>
+            
+            
             <SolidColorBrush x:Key="ThemeBackgroundBrush" Color="{StaticResource ThemeBackgroundColor}" />
             <SolidColorBrush x:Key="ThemeBorderLowBrush" Color="{StaticResource ThemeBorderLowColor}" />
             <SolidColorBrush x:Key="ThemeBorderMidBrush" Color="{StaticResource ThemeBorderMidColor}" />
@@ -47,6 +50,7 @@
             <SolidColorBrush x:Key="CaptionButtonBackground" Color="#ffe5e5e5" />
             <SolidColorBrush x:Key="CaptionButtonBorderBrush" Color="#ffcacaca" />
 
+            <SolidColorBrush x:Key="DarkTransparentBrush" Color="{StaticResource DarkTransparentColor}"></SolidColorBrush>
         </ResourceDictionary>
         <ResourceDictionary x:Key="Dark">
             <Color x:Key="ThemeBackgroundColor">#FF282828</Color>
@@ -151,4 +155,6 @@
 
     <sys:Double x:Key="IconElementThemeHeight">20</sys:Double>
     <sys:Double x:Key="IconElementThemeWidth">20</sys:Double>
+    
+    <sys:Double x:Key="DarkTransparentOpacity">0.2</sys:Double>
 </ResourceDictionary>

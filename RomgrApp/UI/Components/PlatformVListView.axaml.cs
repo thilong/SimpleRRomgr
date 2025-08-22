@@ -6,9 +6,8 @@ namespace RomgrApp.UI.Components;
 
 public partial class PlatformVListView : Grid
 {
-
     public VoidDelegate OnOpenWorkspaceAction;
-    
+
     public PlatformVListView()
     {
         InitializeComponent();
@@ -16,11 +15,61 @@ public partial class PlatformVListView : Grid
         {
             new Platform()
             {
+                Icon = "avares://RomgrApp/Resource/platforms/FC.png",
                 Name = "FC",
                 FullName = "Nintendo Famicom"
             },
             new Platform()
             {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
+                Name = "GBA",
+                FullName = "Nintendo GameBoy Advanced"
+            },
+            new Platform()
+            {
+                Icon = "avares://RomgrApp/Resource/platforms/SFC.png",
                 Name = "GBA",
                 FullName = "Nintendo GameBoy Advanced"
             }

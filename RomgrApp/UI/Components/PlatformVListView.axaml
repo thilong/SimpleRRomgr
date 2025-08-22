@@ -11,45 +11,34 @@
     Width="100"
     mc:Ignorable="d">
     <ListBox
+        ScrollViewer.VerticalScrollBarVisibility="Hidden"
+        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
         x:Name="PlatformList"
         Padding="5"
         Background="White">
+        <ListBox.Styles>
+            <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style Selector="ListBoxItem:pointerover Border">
+                <Setter Property="Background" Value="{DynamicResource DarkTransparentColor}" />
+            </Style>
+            <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style Selector="ListBoxItem:selected Border">
+                <Setter Property="Background" Value="{StaticResource DefaultSelectedColor}" />
+            </Style>
+        </ListBox.Styles>
         <ListBox.ItemTemplate>
             <DataTemplate DataType="models:Platform">
-                <StackPanel Orientation="Vertical" Background="BlanchedAlmond">
-                    <TextBlock Text="{Binding Name}" />
-                    <TextBlock
-                        FontSize="12"
-                        Foreground="Gray"
-                        Text="{Binding FullName}" />
-                </StackPanel>
+                <Border Padding="10" CornerRadius="8" Margin="0,0,0,2">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Spacing="10">
+                        <Image Source="{Binding IconSource}" Width="50" Height="50"></Image>
+                        <TextBlock Text="{Binding Name}" TextAlignment="Center" FontWeight="Bold" />
+                    </StackPanel>
+                </Border>
             </DataTemplate>
         </ListBox.ItemTemplate>
     </ListBox>
-    <!--StackPanel 
-        Grid.Row="2"
-        Margin="{StaticResource DefaultPadding}"
-        Orientation="Horizontal"
-        Spacing="10">
-        <Button
-            x:Name="ActionOpenWorkspace"
-            Width="30"
-            Height="30"
-            Padding="5">
-            <Image Source="{SvgImage /Resource/file.svg}" />
-        </Button>
-        <Button
-            x:Name="ActionAddPlatform"
-            Width="30"
-            Height="30"
-            Padding="5">
-            <Image Source="{SvgImage /Resource/add.svg}" />
-        </Button>
-        <Button
-            Width="30"
-            Height="30"
-            Padding="5">
-            <Image x:Name="ActionDeletePlatform" Source="{SvgImage /Resource/delete.svg}" />
-        </Button>
-    </StackPanel -->
 </StackPanel>

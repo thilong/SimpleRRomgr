@@ -11,9 +11,9 @@ public partial class MainWindow : BaseWindow
     {
         InitializeComponent();
 
-        WindowMinimizeActionButton.Click += (sender, args) => MinimizeCommand();
-        WindowMaximizeActionButton.Click += (sender, args) => MaximizeCommand();
-        WindowCloseActionButton.Click += (sender, args) => CloseCommand();
+        WindowMinimizeAction.Click += (sender, args) => MinimizeCommand();
+        WindowMaximizeAction.Click += (sender, args) => MaximizeCommand();
+        WindowCloseAction.Click += (sender, args) => CloseCommand();
         
         
         

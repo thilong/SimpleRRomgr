@@ -8,19 +8,27 @@
       x:Class="RomgrApp.UI.Components.CategoryVListView"
       RowDefinitions="*,1,60">
     <ListBox Grid.Row="0" Background="White" x:Name="CategoryList" Padding="5">
+        <ListBox.Styles>
+            <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style Selector="ListBoxItem:pointerover Border">
+                <Setter Property="Background" Value="{DynamicResource DarkTransparentColor}" />
+            </Style>
+            <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style Selector="ListBoxItem:selected Border">
+                <Setter Property="Background" Value="{StaticResource DefaultSelectedColor}" />
+            </Style>
+        </ListBox.Styles>
         <ListBox.ItemTemplate>
             <DataTemplate DataType="models:Category">
-                <TextBlock Text="{Binding Name}"></TextBlock>
+                <Border Padding="10,5,10,5" CornerRadius="8">
+                    <TextBlock Text="{Binding Name}"></TextBlock>
+                </Border>
             </DataTemplate>
         </ListBox.ItemTemplate>
     </ListBox>
     <Panel Grid.Row="1" Background="{StaticResource DividerColor}" IsVisible="False"></Panel>
-    <StackPanel Grid.Row="2" Margin="{StaticResource DefaultPadding}" Orientation="Horizontal" Spacing="10">
-        <Button Width="30" Height="30" Padding="5" x:Name="ActionAddCategory">
-            <Image Source="{SvgImage /Resource/add.svg}"></Image>
-        </Button>
-        <Button Width="30" Height="30" Padding="5">
-            <Image Source="{SvgImage /Resource/delete.svg}" x:Name="ActionDeleteCategory"></Image>
-        </Button>
-    </StackPanel>
 </Grid>

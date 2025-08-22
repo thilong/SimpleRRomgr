@@ -31,7 +31,7 @@
       <Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderMidBrush}" />
     </Style>
     <Style Selector="^:pressed  /template/ ContentPresenter#PART_ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource ThemeControlHighBrush}" />
+      <Setter Property="Opacity" Value="{DynamicResource DarkTransparentOpacity}" />
     </Style>
     <Style Selector="^:disabled">
       <Setter Property="Opacity" Value="{DynamicResource ThemeDisabledOpacity}" />

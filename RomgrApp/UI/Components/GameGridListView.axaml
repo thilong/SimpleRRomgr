@@ -1,0 +1,45 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="RomgrApp.UI.Components.GameGridListView"
+             xmlns:components="clr-namespace:RomgrApp.UI.Components">
+    <ListBox x:DataType="components:GameGridListView" ItemsSource="{Binding Games}" Padding="5"
+             ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+             ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal" ItemSpacing="5"
+                           HorizontalAlignment="Center"
+                           Width="{Binding Bounds.Width, 
+                                                RelativeSource={RelativeSource TemplatedParent}}" />
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+        <ListBox.Styles>
+            <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style Selector="ListBoxItem:pointerover Border">
+                <Setter Property="Background" Value="{DynamicResource DarkTransparentColor}" />
+            </Style>
+            <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style Selector="ListBoxItem:selected Border">
+                <Setter Property="Background" Value="{StaticResource DefaultSelectedColor}" />
+            </Style>
+        </ListBox.Styles>
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <Border CornerRadius="8" Padding="5">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/Resource/platforms/ARCADE.png" Width="200"></Image>
+                        <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"></TextBlock>
+                    </StackPanel>
+                </Border>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>
+
+</UserControl>

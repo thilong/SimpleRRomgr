@@ -23,7 +23,7 @@
     </Setter>
 
     <Style Selector="^:pointerover /template/ ContentPresenter">
-      <Setter Property="Background" Value="{DynamicResource ThemeControlHighlightMidBrush}" />
+      <Setter Property="Background" Value="{DynamicResource DarkTransparentColor}" />
     </Style>
 
     <Style Selector="^:selected /template/ ContentPresenter">

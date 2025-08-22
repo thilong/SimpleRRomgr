@@ -25,19 +25,36 @@
                 BorderThickness="0,0,0,1"
                 Padding="10,0,10,0"
                 DockPanel.Dock="Top">
-                <RelativePanel
-                    VerticalAlignment="Center">
-                    <StackPanel RelativePanel.AlignLeftWithPanel="True" Orientation="Horizontal" >
-                        <Button Content="Workspace" />
-                        <Button Content="Platforms" />
+                <RelativePanel>
+                    <StackPanel RelativePanel.AlignLeftWithPanel="True" Orientation="Horizontal" Spacing="5" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <Label Content="RETRO ROMS" FontWeight="Bold" FontSize="24" Margin="0,0, 20, 0" IsHitTestVisible="False" />
+                        <Button Width="24" Height="24" BorderThickness="0">
+                            <Button.Background>
+                                <VisualBrush Visual="{SvgImage /Resource/buttons/workspace.svg}"></VisualBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Width="24" Height="24" BorderThickness="0">
+                            <Button.Background>
+                                <VisualBrush Visual="{SvgImage /Resource/buttons/platforms.svg}"></VisualBrush>
+                            </Button.Background>
+                        </Button>
                     </StackPanel>
-                    <StackPanel RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal">
-                        <Button
-                            x:Name="WindowMinimizeActionButton"
-                            Margin="10,0,0,0"
-                            Content="-" />
-                        <Button x:Name="WindowMaximizeActionButton" Content="🗖" />
-                        <Button x:Name="WindowCloseActionButton" Content="✕" />
+                    <StackPanel RelativePanel.AlignRightWithPanel="True" Orientation="Horizontal" Spacing="10" RelativePanel.AlignVerticalCenterWithPanel="True">
+                        <Button Width="20" Height="20" BorderThickness="0" x:Name="WindowMinimizeAction">
+                            <Button.Background>
+                                <VisualBrush Visual="{SvgImage /Resource/buttons/window_minimize.svg}"></VisualBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Width="20" Height="20" BorderThickness="0" x:Name="WindowMaximizeAction">
+                            <Button.Background>
+                                <VisualBrush Visual="{SvgImage /Resource/buttons/window_maximize.svg}"></VisualBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button Width="20" Height="20" BorderThickness="0" x:Name="WindowCloseAction">
+                            <Button.Background>
+                                <VisualBrush Visual="{SvgImage /Resource/buttons/window_close.svg}"></VisualBrush>
+                            </Button.Background>
+                        </Button>
                     </StackPanel>
                 </RelativePanel>
             </Border>
@@ -53,17 +70,27 @@
                 BorderBrush="{StaticResource DividerColor}"
                 BorderThickness="0,0,1,0"
                 DockPanel.Dock="Left">
-                <components:CategoryVListView Width="200" />
+                <components:CategoryVListView Width="160" />
             </Border>
             <!--  game list  -->
-            <Border
+            <!--Border
                 Width="300"
                 BorderBrush="{StaticResource DividerColor}"
                 BorderThickness="0,0,1,0"
                 DockPanel.Dock="Left">
                 <components:GameVListView />
-            </Border>
-            <Panel />
+            </Border-->
+
+            <Grid ColumnDefinitions="*,300" DockPanel.Dock="Left">
+                <components:GameGridListView Grid.Column="0" />
+                <Border IsVisible="True"
+                        Grid.Column="1"
+                        BorderBrush="{StaticResource DividerColor}"
+                        BorderThickness="1,0,0,0">
+                    <Panel></Panel>
+                </Border>
+            </Grid>
+
         </DockPanel>
     </Border>
 </Window>

@@ -12,7 +12,9 @@
                 <MergeResourceInclude Source="TextBlocks.axaml" />
                 <MergeResourceInclude Source="ListBox.axaml" />
                 <MergeResourceInclude Source="ListBoxItem.axaml" />
-
+                <MergeResourceInclude Source="ItemsControl.axaml" />
+                <MergeResourceInclude Source="ScrollBar.xaml" />
+                <MergeResourceInclude Source="ScrollViewer.xaml" />
                 <MergeResourceInclude Source="Windows.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

@@ -16,6 +16,14 @@ public partial class CategoryVListView : Grid
             new()
             {
                 Name = "All"
+            },
+            new()
+            {
+                Name = "角色扮演"
+            },
+            new()
+            {
+                Name = "格斗游戏"
             }
         };
         CategoryList.ItemsSource = td;

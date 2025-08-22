@@ -1,4 +1,9 @@
-﻿namespace RomgrApp.Model;
+﻿using System;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
+using RomgrApp.Logic;
+
+namespace RomgrApp.Model;
 
 public class Platform
 {
@@ -14,4 +19,8 @@ public class Platform
     {
         
     }
+
+
+
+    public Bitmap IconSource => ImageHelper.LoadFromResource(Icon);
 }
